@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MedCAL-Bench"
+version = "0.1.0"
+
+
+dependencies = [
+    "SimpleITK>=2.4.1",
+    "medpy>=0.5.2",
+    "imageio>=2.37.0",
+    "monai>=1.4.0",
+    "opencv-python>=4.11.0.86",
+    "scikit-image>=0.25.2",
+    "batchgenerators>=0.25.1",
+    "batchgeneratorsv2>=0.2.3",
+    "acvl_utils>=0.2.5",
+]
+
+
+[tool.setuptools.packages.find]
+include = ["train", "train.*"]
+exclude = ["data", "check", "visualization"]
